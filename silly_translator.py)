@@ -1,0 +1,13 @@
+import random
+
+def silly_translator(text):
+    words = text.split()
+    for i in range(len(words)):
+        letters = list(words[i])
+        random.shuffle(letters)
+        words[i] = ''.join(letters)
+    return ' '.join(words)
+
+text = input("Enter some text: ")
+translation = silly_translator(text)
+print("Silly translation:", translation)
